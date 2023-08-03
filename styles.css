@@ -1,0 +1,155 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+:root{
+    --outputText-color:  hsl(259, 100%, 65%);
+    --error-color:  hsl(0, 100%, 67%);
+    --third-color:  hsl(0, 0%, 100%);
+    --Ofwhite-color: hsl(0, 0%, 94%);
+    --LightGrey-color: hsl(0, 0%, 86%);
+    --SmokeyGrey-color: hsl(0, 1%, 44%);
+    --OffBlack-color: hsl(0, 0%, 8%);
+}
+body{
+    background-color: var(--Ofwhite-color);
+    font-family: 'Popins',sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--Ofwhite-color);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+   width: 43rem;
+   height: 35rem;
+   background-color: var(--third-color);
+   border-radius: 1.2rem;
+   border-bottom-right-radius: 10rem;
+   padding: 40px;
+
+}
+.first-container{
+    
+    display: flex;
+    justify-content: space-around;
+    color: var(--SmokeyGrey-color);
+}
+
+
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    
+}
+.input-box label{
+    letter-spacing: 0.2rem;
+    padding-bottom: 10px;
+}
+.input-box input{
+    width: 140px;
+    padding-block: 15px;
+    border-radius: 7px;
+    border: 1px solid var(--LightGrey-color);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.input-box input:focus{
+    border: 1px solid var(--outputText-color);
+    outline: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.error{
+    font-size: 12px;
+    font-style: italic;
+    color: var(--error-color);
+    margin-top: 0.4rem;
+    font-weight: 500;
+}
+.button-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.line{
+    border-bottom: 1px solid var(--LightGrey-color);
+   width: 100%;
+}
+button {
+    border-radius: 50%;
+    border: none;
+    padding: 20px;
+    background-color: var(--outputText-color);
+    cursor: pointer;
+    transition: .3s ease;
+}
+button:hover{
+    background-color: var(--OffBlack-color);
+}
+
+.result{
+    font-size: 5rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: -20px;
+}
+span{
+    color: var(--outputText-color);
+    padding-right: 10px;
+}
+
+@media screen and (max-width:750px){
+    .container{
+        width: 360px;
+        height: 450px;
+        border-bottom-right-radius: 100px;
+    }
+    .first-container {
+        width: 100%;
+    }
+    .input-box input{
+        width: 90px;
+        padding: 15px;
+        font-size: 20px;
+
+    }
+    .result{
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    button img{
+        width: 25px;
+    }
+
+    .line{
+        width: 50%;
+    }
+    .line-sec{
+        width: 50%;
+        border-bottom: 1px solid var(--LightGrey-color);
+    }
+
+    .button-content{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .error{
+        margin-left: 10px;
+        width: 90px;
+    }
+} 
